@@ -9,7 +9,13 @@ create table inspectionform (
 )
 
 create table violation (
-	#violation
+	id Int,
+	name varchar(60),
+	color varchar(30),
+	description text,
+	imagePath varchar(255),
+	form_ID Int,
+	food_code_clause_ID Int
 )
 
 create table foodestablishment (
