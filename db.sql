@@ -1,4 +1,4 @@
-# this is SQL or some shit, we should use it to make the database
+# this is SQL or some s**t, we should use it to make the database
 
 create table user (
 	#user fields
