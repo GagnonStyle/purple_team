@@ -1,24 +1,40 @@
-<title>New Inspection</title>
-<h2> New Inspection</h2>
-<form>
-	<input type="text" name="id" value="" placeholder="ID"><br>
-    <input type="text" name="restaurantid" value="" placeholder="Restaurant ID"><br>
-    <input type="date" name="date" value="" ><br>
-    <input type="text" name="permitnumber" value="" placeholder="Permit Number"><br>
-    
-    Reinspection: <input type="checkbox" name="reinspection" value="reinspection"><br>
-    Action Required: <input type="checkbox" name="actionRequired" value="actionRequired"><br>
-    
-    <label> Risk Level: </label>
-    <input type="radio" name="risklevel" value="1"> 1
-  	<input type="radio" name="risklevel" value="2"> 2
-  	<input type="radio" name="risklevel" value="3"> 3
-  	<input type="radio" name="risklevel" value="4"> 4
-  	<input type="radio" name="risklevel" value="5"> 5 <br>
+<html>
 
-  	<input type="checkbox" name="embargo" value="embargo"> Embargo<br>
-  	<input type="date" name="reinspectionDate" value="" ><br>
-  	<input type="text" name="signature" value="" placeholder="Signature"><br>
+  <head>
+    <title>New Inspection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="new_inspection.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="w3.css" media="screen">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
-  	<button> Submit </button>
-</form>
+  </head>
+
+  <body>
+    <form class="w3-container">
+      <center><h2>Inspection Form</h2></center>
+    	<p><input class="w3-input w3-border w3-hover-blue" type="text" name="id" value="" placeholder="ID"></p>
+      <p><input class="w3-input w3-border w3-hover-blue" name="restaurantid" value="" placeholder="Restaurant ID"></p>
+      <p>Inspection Date: <input type="date" name="date" value=""></p>
+      <p><input class="w3-input w3-border w3-hover-blue" type="text" name="permitnumber" value="" placeholder="Permit Number"></p>
+      
+      <p><input class="w3-check" type="checkbox" name="reinspection" value="reinspection"><label class="w3-validate">Re-Inspection</label></p>
+      <p><input class="w3-check" type="checkbox" name="actionRequired" value="actionRequired"><label class="w3-validate">Action Required</label></p>
+      
+      <p><label> Risk Level: </label>
+        <input type="radio" name="risklevel" value="1"> 1
+      	<input type="radio" name="risklevel" value="2"> 2
+      	<input type="radio" name="risklevel" value="3"> 3
+      	<input type="radio" name="risklevel" value="4"> 4
+      	<input type="radio" name="risklevel" value="5"> 5
+      </p>
+
+    	<p><input class="w3-check" type="checkbox" name="embargo" value="embargo"><label class="w3-validate">Re-Inspection</label></p>
+    	<p>Re-Inspection Date: <input type="date" name="reinspectionDate" value="" ></p>
+    	<p><input class="w3-input w3-border w3-hover-blue" type="text" name="signature" value="" placeholder="Signature"></p>
+
+    	<button> Submit </button>
+    </form>
+  </body>
+
+</html>
+

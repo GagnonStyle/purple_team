@@ -43,6 +43,10 @@ app.get('/health_code', function (req, res) {
   res.render('health_code');
 });
 
+app.get('/foodcode', function (req, res) {
+  res.render('foodcode');
+});
+
 app.use('/inspections', require('./routes/inspection_routes'));
 
 // Starts the express application up on the port specified by the
