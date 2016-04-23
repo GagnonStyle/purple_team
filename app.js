@@ -39,6 +39,14 @@ app.get('/login', function (req, res) {
   res.render('login');
 });
 
+app.get('/new', function (req, res) {
+  res.render('new_inspection');
+});
+
+app.get('/all', function (req, res) {
+  res.render('all_inspections');
+});
+
 app.get('/health_code', function (req, res) {
   res.render('health_code');
 });
