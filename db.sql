@@ -1,33 +1,59 @@
-# this is SQL or some s**t, we should use it to make the database
+drop table if exists users;
+drop table if exists inspection_forms;
+drop table if exists inspections;
+drop table if exists violations;
+drop table if exists food_establishments;
 
-create table user (
-	#user fields
-)
+create table users (
+	id serial,
+	is_admin boolean,
+	username varchar(255),
+	password varchar(255),
+	town varchar(255),
+	primary key (id)
+);
+insert into users values (default, TRUE, 'pparker', 'spiderman', 'Midtown');
+insert into users values (default, FALSE, 'jjjameson', 'dailybugle', 'Midtown');
 
-create table inspectionform (
-	#inspectionform fields
-)
+create table inspections (
+	id serial,
+	establishment_id integer,
+	user_id integer,
+	date_of_inspection date,
+	time_in timestamp,
+	time_hout timestamp,
+	permit_number integer,
+	type varchar(255),
+	action_required boolean,
+	risk_level integer,
+	embargo boolean,
+	date_of_resinspection date,
+	signed varchar(255),
+	primary key (id)
+);
 
-create table violation (
-	id Int,
-	name varchar(60),
-	color varchar(30),
+create table violations (
+	id serial,
+	inspection_id integer,
+	name varchar(255),
+	color varchar(255),
 	description text,
-	imagePath varchar(255),
-	form_ID Int,
-	food_code_clause_ID Int
-)
+	image_path varchar(255),
+	food_code_clause_number integer,
+	primary key (id)
+);
 
-create table foodestablishment (
-	id Int,
-	name varchar(30),
-	town varchar(30),
+create table food_establishments (
+	id serial,
+	name varchar(255),
+	town varchar(255),
 	address text,
-	person_in_charge varchar(60),
-	description text
-)
+	person_in_charge varchar(255),
+	description text,
+	primary key (id)
+);
 
 
-create table foodcodeclause (
-	#This might not end up existing
-)
+-- create table foodcodeclause (
+-- 	#This might not end up existing
+-- )

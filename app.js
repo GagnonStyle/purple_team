@@ -44,6 +44,7 @@ app.get('/health_code', function (req, res) {
 });
 
 app.use('/inspections', require('./routes/inspection_routes'));
+app.use('/users', require('./routes/user_routes'));
 
 // Starts the express application up on the port specified by the
 // application variable 'port' (which was set above). The second
