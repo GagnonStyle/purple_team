@@ -1,5 +1,4 @@
 drop table if exists users;
-drop table if exists inspection_forms;
 drop table if exists inspections;
 drop table if exists violations;
 drop table if exists food_establishments;
