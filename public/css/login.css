@@ -1,8 +1,21 @@
 body {
-    background-color: #7d85f2;
+  background-color: #929292;
     vertical-align:middle;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+}
+
+.signin {
+  position: relative;
+  left: 15%;
 }
 
 .loginSection{
   margin:auto;
+}
+
+.logBox {
+  position: absolute;
+  left: 5%;
 }

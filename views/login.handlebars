@@ -2,22 +2,24 @@
 <html>
 <head>
 	<title> Login Page </title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="login.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="w3.css" media="screen">
-	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+	<link rel="stylesheet" type="text/css" href="/css/login.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="/css/w3.css" media="screen">
+	<link type="text/css" rel="stylesheet" href="/dist/css/jquery.mmenu.all.css" />
+	<link type="text/css" rel="stylesheet" href="/css/demo.css" />
 </head>
 <body>
 <img src="HealthCheckLogo.jpg" align="center" alt="Logo" height="140" width="370">
-<h2 align="center"> Welcome Health Inspector! </h2>
+<div class= "logBox">
+<h2> Welcome Health Inspector! </h2>
 <header></header>
-<section align="center" class= "loginSection" id="login">
+<section class= "loginSection" id="login">
   <form method="post" action="/api/user">
     User Name: <input type="text" name="username"> <br>
     Password:   <input type="text" name="password"> <br>
     <input class= "signin" type="submit" value="Sign In">
   </form>
 </section>
+</div>
 </body>
 </html>
-
