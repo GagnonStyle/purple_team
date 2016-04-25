@@ -1,2 +1,14 @@
 <title>New User</title>
 <h2>New User</h2>
+<form method="post" action="/users/create">
+    Enter a username:<br>
+    <input type="text" name="username" placeholder="Username"><br><br>
+    Enter a password:<br>
+    <input type="password" name="password" placeholder="Password"><br>
+    <input type="password" name="confirm_password" placeholder="Re-enter password"><br><br>
+    Enter your town:<br>
+    <input type="text" name="town" placeholder="Town"><br><br>
+    Is Admin:
+    <input type="checkbox" name="is_admin"></input><br><br>
+    <button>Create Account</button>
+</form>
