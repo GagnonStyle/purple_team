@@ -20,7 +20,7 @@ create table inspections (
 	user_id integer,
 	date_of_inspection date,
 	time_in timestamp,
-	time_hout timestamp,
+	time_out timestamp,
 	permit_number integer,
 	type varchar(255),
 	action_required boolean,

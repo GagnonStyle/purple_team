@@ -45,7 +45,7 @@ app.get('/new', function (req, res) {
   res.render('new_inspection');
 });
 
-app.get('/all', function (req, res) {
+app.get('/inspections', function (req, res) {
   res.render('all_inspections');
 });
 
