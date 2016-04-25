@@ -6,7 +6,7 @@ router.get('/', (req,res) => {
 	var message = req.flash('users');
 	model.all(function(err, users){
 	      if(err){
-	        	console.log(err);
+	        	req.flash('home', 'Error:' + err);
 	        	res.redirect('/');
 	      } else {
 		        res.render('all_users', { users: users, message: message });
