@@ -1,5 +1,5 @@
 var express = require('express');
-var model = require('../lib/food_establishment');
+var model = require('../lib/food_establishments');
 var router = express.Router();
 
 router.get('/', (req,res) => {
