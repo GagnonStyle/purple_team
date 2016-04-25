@@ -1,0 +1,248 @@
+.header {
+  padding-left: 36.5px;
+}
+
+#class0{
+  background-color: #2878d8;
+  height: 130px;
+  width: 100%;
+  border-top: 1px solid #444;
+}
+
+#class1{
+  background-color: #2878d8;
+  height: 130px;
+  width: 100%;
+  border-top: 1px solid #444;
+}
+
+#class2{
+  background-color: #2878d8;
+  height: 130px;
+  width: 100%;
+  border-top: 1px solid #444;
+}
+
+#class3{
+  background-color: #2878d8;
+  height: 130px;
+  width: 100%;
+  border-top: 1px solid #444;
+}
+
+#class4{
+  background-color: #2878d8;
+  height: 130px;
+  width: 100%;
+  border-top: 1px solid #444;
+}
+
+#class5{
+  background-color: #2878d8;
+  height: 130px;
+  width: 100%;
+  border-top: 1px solid #444;
+}
+
+#classname a{
+  text-decoration: none;
+}
+
+#class0 p1{
+  font-size: 15px;
+  color: white;
+  position: absolute;
+  margin-top: 55px;
+  padding-left: 1%;
+}
+
+#class1 p1{
+  font-size: 15px;
+  color: white;
+  position: absolute;
+  margin-top: 55px;
+  padding-left: 1%;
+}
+
+#class2 p1{
+  font-size: 15px;
+  color: white;
+  position: absolute;
+  margin-top: 55px;
+  padding-left: 1%;
+}
+
+#class3 p1{
+  font-size: 15px;
+  color: white;
+  position: absolute;
+  margin-top: 55px;
+  padding-left: 1%;
+}
+
+#class4 p1{
+  font-size: 15px;
+  color: white;
+  position: absolute;
+  margin-top: 55px;
+  padding-left: 1%;
+}
+
+#class5 p1{
+  font-size: 15px;
+  color: white;
+  position: absolute;
+  margin-top: 55px;
+  padding-left: 1%;
+}
+
+#classname{
+  float: left;
+  width: 13%;
+  height: 128.5px;
+  background-color: #595959;
+}
+
+#classname p2{
+  width: 166px;
+  position: absolute;
+  color: white;
+  font-size: 10px;
+  margin: 70px auto;
+  text-align: center;
+}
+
+#students{
+  float: left;
+  width: 70%;
+  height: 130px;
+}
+
+#studentBody{
+  float: left;
+  width: 12.5%;
+  height: 130px;
+}
+
+#studentImage{
+  display: block;
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  border-radius: 50px;
+  border: 2px #444 solid;
+  margin: 17px 30px;
+}
+
+#studentBody p2{
+  width: 136px;
+  position: absolute;
+  color: white;
+  font-size: 15px;
+  margin: 105px auto;
+  text-align: center;
+}
+
+#dropdown{
+  color: white;
+  font-size: 30px;
+  margin: 50px 0 0 90px;
+  float: left;
+}
+
+#extend0{
+    display: none;
+    background-color: #fff;
+    height: 150px;
+    width: 100%;
+}
+
+#extend1{
+    display: none;
+    background-color: #fff;
+    height: 150px;
+    width: 100%;
+}
+
+#extend2{
+    display: none;
+    background-color: #fff;
+    height: 150px;
+    width: 100%;
+}
+
+#extend3{
+    display: none;
+    background-color: #fff;
+    height: 150px;
+    width: 100%;
+}
+
+#extend4{
+    display: none;
+    background-color: #fff;
+    height: 150px;
+    width: 100%;
+}
+
+#extend5{
+    display: none;
+    background-color: #fff;
+    height: 150px;
+    width: 100%;
+}
+
+.icon{
+  margin-left: 14.5%;
+  margin-top: 3%;
+}
+
+#profRight{
+  float: right !important;
+}
+
+
+#addclass{
+  float: right;
+  margin-top: 12.5px;
+  margin-right: 10px;
+}
+
+#addclassdropdown{
+  display: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+@media (max-width: 1041px){
+  #students{
+    display: none;
+  }
+
+  #dropdown{
+    float: right;
+    margin-right: 5%;
+  }
+
+  #classname{
+    width: 0%;
+  }
+
+  #classname p1{
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 10%;
+  }
+
+  #cap, #pencil, #calendar, #event{
+    font-size: 40px;
+    margin-top: 60px;
+  }
+
+  #cap{
+    margin-left: 8%;
+  }
+}

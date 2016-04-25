@@ -9,12 +9,14 @@ var bodyParser    = require('body-parser');
 
 var app = express();
 
+app.use(flash());
+
 app.use(session({
   secret: 'octocat',
   saveUninitialized: false, // does not save uninitialized session.
   resave: false             // does not save session if not modified.
 }));
-app.use(flash());
+
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
