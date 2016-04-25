@@ -21,13 +21,16 @@ router.get('/new', (req,res) => {
 
 router.post('/create', (req,res) => {
     var data = req.body;
-
-    (!data.is_admin) && (data.is_admin = false);
+    console.log(data);
     // if any empty inputs, redirect back to signup with message
 
+    data.time_in = new Date();
+    data.time_out = new Date();
+
+    (!data.action_required) && (data.action_required = false);
+    (!data.embargo) && (data.embargo = false);
     
-    
-    if(!(data.establishment_id && data.user_id && data.date_of_inspection && data.time_in && data.time_out && data.permit_number && data.type && data.action_required && data.risk_level && data.embargo && data.date_of_reinspection && data.signed)){
+    if(!(data.establishment_id && data.user_id && data.date_of_inspection && data.time_in && data.time_out && data.permit_number && data.type &&  data.risk_level &&  data.date_of_reinspection && data.signed)){
 		req.flash('inspections', 'One or more required fields omitted');
 		res.redirect('/inspections/new'); 
     } else {
