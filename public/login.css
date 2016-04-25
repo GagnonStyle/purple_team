@@ -1,6 +1,14 @@
 body {
     background-color: #7d85f2;
     vertical-align:middle;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+}
+
+.signin {
+  position: relative;
+  left: 15%;
 }
 
 .loginSection{
