@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 
 app.set('port', process.env.PORT || 3000);
 
-var view = handlebars.create();
+var view = handlebars.create({ defaultLayout: 'main' });
 app.engine('handlebars', view.engine);
 app.set('view engine', 'handlebars');
 
