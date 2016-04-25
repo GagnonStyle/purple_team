@@ -36,13 +36,12 @@
             <form class="w3-container" method="post" action="/inspection/create">
               <center><h2>Inspection Form</h2></center>
               <p>Food Establishment: <br>
-                <select>
+                <select name="establishment_id">
                     {{#each food_establishments}}
                         <option value="{{this.id}}">{{this.name}}</option>
                     {{/each}}
                 </select>
               </p>
-              <p>Resturaunt ID: <br> <input type="text" name="establishment_id" value=""></p>
               <p>User ID: <br> <input type="text" name="user_id" value=""></p>
               <p>Inspection Date:<br> <input type="date" name="date_of_inspection" value=""></p>
               <p>Time in:<br> <input type="text" name="time_in" value=""></p>
