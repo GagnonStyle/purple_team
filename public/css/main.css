@@ -1,0 +1,204 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body,ul,li {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+body{
+	font-size: 12px;
+	font-family: ubuntu, helvetica, arial;
+}
+
+#cont {
+	position: relative;
+	width: 100%;
+	background: white;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+#tp {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+}
+
+p1{
+	color: #333;
+	font-size: 50px;
+}
+
+#head{
+	background: white;
+	padding-top: 3%;
+	padding-bottom: 2%;
+	border-bottom: 1px solid black;
+}
+
+#panel1{
+	background-color: white;
+	height: 20%;
+	padding-top: 2%;
+	padding-bottom: 1%;
+	border-bottom: 1px solid black;
+}
+
+#panel2{
+	background-color: white;
+	height: 20%;
+	padding-top: 2%;
+	padding-bottom: 1%;
+}
+
+#panel3{
+	background-color: white;
+	height: 20%;
+	padding-top: 2%;
+	padding-bottom: 1%;
+	border-bottom: 1px solid black;
+}
+
+#panel4{
+	background-color: white;
+	height: 20%;
+	padding-top: 2%;
+	padding-bottom: 1%;
+}
+
+
+
+#content{
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+#quote{
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+p2{
+	color: #333;
+	font-size: 30px;
+}
+
+#test p3{
+	color: #333;
+	font-size: 14px;
+
+}
+
+#anthony{
+	list-style: circle;
+}
+
+#list{
+	margin: 0 auto;
+}
+
+#login{
+	padding-top: 1%;
+}
+
+#content{
+	margin: 0 auto;
+	width: 80%;
+	padding: 2%;
+	background-color: #f2f2f2;
+}
+
+#logo{
+	margin: 0 auto;
+}
+
+p4{
+	font-color: #444;
+	font-size: 25px;
+}
+
+#profRight{
+	float: right !important;
+}
+
+#prof{
+	text-align: center;
+}
+
+#drawerImage{
+  height: 130px;
+  width: 130px;
+  border-radius: 90px;
+  border: 2px #444 solid;
+  margin: 17px 30px;
+  margin-bottom: -1%;
+  margin-top: 1%;
+}
+
+#drawerProfPic{
+  background-color: #444;
+}
+
+#prof{
+  background-color: #2878d8;
+}
+
+#drawerName{
+  color: white;
+  font-weight: bolder;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  font-size: 1.5em;
+}
+
+#onlyWhenLoggedIn{
+	font-size: 15px;
+	color: black;
+}
+#standard{
+	font-size: 15px;
+	color: black;
+}
+
+#banner{
+	background-color: #f2f2f2;
+	height: 40px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 10px;
+	font-size: 1.25em;
+}
+
+#goback {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #444;
+    position: relative;
+    height: auto;
+    overflow: auto;
+}
+
+#goback li a{
+  display: block;
+    color: #fff;
+    padding: 10px 0 10px 20px;
+    text-decoration: none;
+}
+
+</style>
+
+/*#bottomDrawer{
+	background-color: white;
+	height: 280px;
+	background-image: url(/imgs/logo.png);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 10% 85%; 
+    background-size: 225px 160px;
+}*/
