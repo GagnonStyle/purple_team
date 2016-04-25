@@ -9,19 +9,21 @@ var bodyParser    = require('body-parser');
 
 var app = express();
 
+app.use(flash());
+
 app.use(session({
   secret: 'octocat',
   saveUninitialized: false, // does not save uninitialized session.
   resave: false             // does not save session if not modified.
 }));
-app.use(flash());
+
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.set('port', process.env.PORT || 3000);
 
-var view = handlebars.create();
+var view = handlebars.create({ defaultLayout: 'main' });
 app.engine('handlebars', view.engine);
 app.set('view engine', 'handlebars');
 
@@ -39,8 +41,20 @@ app.get('/login', function (req, res) {
   res.render('login');
 });
 
+app.get('/new', function (req, res) {
+  res.render('new_inspection');
+});
+
+app.get('/all', function (req, res) {
+  res.render('all_inspections');
+});
+
 app.get('/health_code', function (req, res) {
   res.render('health_code');
+});
+
+app.get('/foodcode', function (req, res) {
+  res.render('foodcode');
 });
 
 app.use('/inspections', require('./routes/inspection_routes'));
