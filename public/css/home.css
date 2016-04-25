@@ -1,0 +1,34 @@
+body {
+  background-color: #929292;
+}
+
+
+.logBox {
+  position: absolute;
+  left: 41%;
+}
+
+.logo{
+  position: relative;
+  left:44%;
+}
+
+.homebutton {
+  margin-bottom: 45px;
+}
+
+.homebuttonstyle
+{
+  border-radius: 12px;
+  font-size: 24px;
+  height: 50px;
+  background-color: white;
+  color: black;
+  -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.homebuttonstyle:hover {
+    background-color: #2196F3; /* Green */
+    color: white;
+}
