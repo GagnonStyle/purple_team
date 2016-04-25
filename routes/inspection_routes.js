@@ -1,4 +1,6 @@
 var express = require('express');
+var model = require('../lib/inspections');
+var establishments = require('../lib/food_establishments');
 
 var router = express.Router();
 
@@ -7,7 +9,14 @@ router.get('/', (req,res) => {
 });
 
 router.get('/new', (req,res) => {
-	res.render('new_inspection');
+	establishments.all(function(err, establishments){
+		if(err){
+			req.flash('home', 'Error: ' + err);
+			res.redirect('/')
+		} else {
+			res.render('new_inspection', {food_establishments: establishments});			
+		}
+	});
 });
 
 
