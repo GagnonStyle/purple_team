@@ -1,10 +1,6 @@
 var express = require('express');
 var model = require('../lib/inspections');
-<<<<<<< HEAD
-=======
 var establishments = require('../lib/food_establishments');
-
->>>>>>> b2d993a4483ff16fc95a66ce2d7f45328f1e97df
 var router = express.Router();
 
 router.get('/', (req,res) => {
@@ -12,7 +8,7 @@ router.get('/', (req,res) => {
 });
 
 router.get('/new', (req,res) => {
-<<<<<<< HEAD
+
         var message = req.flash('inspections');
 	res.render('new_inspection', { message: message });
         console.log(message);
@@ -41,7 +37,7 @@ router.post('/create', (req,res) => {
 			}
 		});
    }
-=======
+
 	establishments.all(function(err, establishments){
 		if(err){
 			req.flash('home', 'Error: ' + err);
@@ -50,7 +46,7 @@ router.post('/create', (req,res) => {
 			res.render('new_inspection', {food_establishments: establishments});			
 		}
 	});
->>>>>>> b2d993a4483ff16fc95a66ce2d7f45328f1e97df
+
 });
 
 
