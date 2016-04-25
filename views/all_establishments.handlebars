@@ -1,0 +1,14 @@
+<title>Establishments</title>
+<h2>Listing Establishments</h2>
+
+{{#each food_establishments}}
+  <div class="establishment">
+    <div class="establishment_name">Restaurant: <strong>{{this.name}}</strong></div>
+    <div class="establishment_town">Town: <strong>{{this.town}}</strong></div>
+    <div class="establishment_address">Address: <strong>{{this.address}}</strong></div>
+    <div class="establishment_person_in_charge">Restaurant Manager: <strong>{{this.person_in_charge}}</strong></div>
+    <div class="description">description: <strong>{{this.description}}</strong></div>
+
+  </div>
+  </br>
+{{/each}}
