@@ -1,0 +1,11 @@
+<title>Users</title>
+<h2>Listing Users</h2>
+
+{{#each users}}
+  <div class="user">
+    <div class="user_username">Username: <strong>{{this.username}}</strong></div>
+    <div class="user_town">Town: <strong>{{this.town}}</strong></div>
+    <div class="user_is_admin">Is Admin: <strong>{{this.is_admin}}</strong></div>
+  </div>
+  </br>
+{{/each}}
