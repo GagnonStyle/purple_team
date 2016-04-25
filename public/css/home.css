@@ -1,0 +1,18 @@
+body {
+  background-color: #929292;
+}
+
+
+.logBox {
+  position: absolute;
+  left: 45%;
+}
+
+.logo{
+  position: relative;
+  left:44%;
+}
+
+.homebutton {
+  margin-bottom: 65px;
+}
