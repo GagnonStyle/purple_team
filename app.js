@@ -34,19 +34,12 @@ app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
-  res.render('home');
+  var message = req.flash('home');
+  res.render('home', {message: message});
 });
 
 app.get('/login', function (req, res) {
   res.render('login');
-});
-
-app.get('/new', function (req, res) {
-  res.render('new_inspection');
-});
-
-app.get('/all', function (req, res) {
-  res.render('all_inspections');
 });
 
 app.get('/health_code', function (req, res) {

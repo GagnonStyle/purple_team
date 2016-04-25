@@ -6,10 +6,10 @@ router.get('/', (req,res) => {
 	var message = req.flash('establishments');
 	model.all(function(err, establishments){
 	      if(err){
-	        	req.flash('establishments', err);
+	        	req.flash('home', err);
 	        	res.redirect('/');
 	      } else {
-		        res.render('all_establishments', { establishments: establishments, message: message });
+		        res.render('all_establishments', { food_establishments: establishments, message: message });
 	      }
     });
 });

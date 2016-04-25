@@ -20,6 +20,13 @@
               <p><input class="w3-input w3-border w3-hover-blue" type="text" name="permit_number" value="" placeholder="Signature"></p>
                <p><input class="w3-check" type="checkbox" name="type" value="reinspection"><label class="w3-validate">Re-Inspection</label></p>
               <p><input class="w3-check" type="checkbox" name="actionRequired" value="actionRequired"><label class="w3-validate">Action Required</label></p>
+                <label>Food Establishment Name </label><select name="establishment_id">
+                    {{#each food_establishments}}
+                        <option value="{{this.id}}">{{this.name}}</option>
+                    {{/each}}
+                </select>
+              </p>
+              
               <p><label> Risk Level: </label>
                 <input class="w3-radio" type="radio" name="risk_level" value="1"> <label class="w3-validate">1</label>
               	<input class="w3-radio" type="radio" name="risk_level" value="2"> <label class="w3-validate">2</label>
