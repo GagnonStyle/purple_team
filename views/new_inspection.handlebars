@@ -33,29 +33,29 @@
       <div class="content"></div>
         <div id="cont">
           <div id="tp">
-            <form class="w3-container">
+            <form class="w3-container" method="post" action="/inspection/create">
               <center><h2>Inspection Form</h2></center>
-            	<p><input class="w3-input w3-border w3-hover-blue" type="text" name="id" value="" placeholder="ID"></p>
-              <p><input class="w3-input w3-border w3-hover-blue" name="restaurantid" value="" placeholder="Restaurant ID"></p>
-              <p>Inspection Date: <input type="date" name="date" value=""></p>
-              <p><input class="w3-input w3-border w3-hover-blue" type="text" name="permitnumber" value="" placeholder="Permit Number"></p>
-              
-              <p><input class="w3-check" type="checkbox" name="reinspection" value="reinspection"><label class="w3-validate">Re-Inspection</label></p>
-              <p><input class="w3-check" type="checkbox" name="actionRequired" value="actionRequired"><label class="w3-validate">Action Required</label></p>
-              
+              <p>Resturaunt ID: <br> <input type="text" name="establishment_id" value=""></p>
+              <p>User ID: <br> <input type="text" name="user_id" value=""></p>
+              <p>Inspection Date:<br> <input type="date" name="date_of_inspection" value=""></p>
+              <p>Time in:<br> <input type="text" name="time_in" value=""></p>
+              <p>Time out:<br> <input type="text" name="time_out" value=""></p>
+              <p>Permit Number:<br> <input type="text" name="permit_number" value=""></p>
+              <p>Type:<br> <input type="text" name="type" value=""></p>
+              <p><input class="w3-check" type="checkbox" name="type" value="actionRequired"><label class="w3-validate">Action Required</label></p>
               <p><label> Risk Level: </label>
-                <input type="radio" name="risklevel" value="1"> 1
-              	<input type="radio" name="risklevel" value="2"> 2
-              	<input type="radio" name="risklevel" value="3"> 3
-              	<input type="radio" name="risklevel" value="4"> 4
-              	<input type="radio" name="risklevel" value="5"> 5
+                <input type="radio" name="risk_level" value="1"> 1
+              	<input type="radio" name="risk_level" value="2"> 2
+              	<input type="radio" name="risk_level" value="3"> 3
+              	<input type="radio" name="risk_level" value="4"> 4
+              	<input type="radio" name="risk_level" value="5"> 5
               </p>
 
-            	<p><input class="w3-check" type="checkbox" name="embargo" value="embargo"><label class="w3-validate">Re-Inspection</label></p>
-            	<p>Re-Inspection Date: <input type="date" name="reinspectionDate" value="" ></p>
-            	<p><input class="w3-input w3-border w3-hover-blue" type="text" name="signature" value="" placeholder="Signature"></p>
+              <p><input class="w3-check" type="checkbox" name="embargo" value="embargo"><label class="w3-validate">Embargo</label></p>
+              <p>Re-Inspection Date:<br> <input type="date" name="date_of_reinspection" value="" ></p>
+              <p>Signature:<br> <input type="text" name="signature" value=""></p>
 
-            	<button> Submit </button>
+              <button> Submit </button>
             </form>
           </div>
         </div>   
