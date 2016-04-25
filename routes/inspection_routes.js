@@ -8,10 +8,15 @@ router.get('/', (req,res) => {
 });
 
 router.get('/new', (req,res) => {
-
         var message = req.flash('inspections');
-	res.render('new_inspection', { message: message });
-        console.log(message);
+        establishments.all(function(err, establishments){
+		if(err){
+			req.flash('home', 'Error: ' + err);
+			res.redirect('/')
+		} else {
+			res.render('new_inspection', {food_establishments: establishments, message:message});			
+		}
+	});
 });
 
 router.post('/create', (req,res) => {
@@ -38,14 +43,7 @@ router.post('/create', (req,res) => {
 		});
    }
 
-	establishments.all(function(err, establishments){
-		if(err){
-			req.flash('home', 'Error: ' + err);
-			res.redirect('/')
-		} else {
-			res.render('new_inspection', {food_establishments: establishments});			
-		}
-	});
+	
 
 });
 
