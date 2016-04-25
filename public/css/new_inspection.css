@@ -1,3 +1,30 @@
 html{
-	background-color: #929292;
+	background-color: white;
+}
+
+body{
+	width: 100%;
+	height: auto;
+}
+
+.personalContainer{
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-bottom: 2%;
+	padding-top: 0.5%;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #1194f6;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #137bc8;
 }

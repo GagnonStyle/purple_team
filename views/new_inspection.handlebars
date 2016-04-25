@@ -1,78 +1,41 @@
 <html>
 
-  <head>
-    <title>New Inspection</title>
+    <head>
+      <title>New Inspection</title>
 
-    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
-    <link rel="stylesheet" type="text/css" href="/css/new_inspection.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="/css/w3.css" media="screen">
-    <link type="text/css" rel="stylesheet" href="/dist/css/jquery.mmenu.all.css" />
-    <link type="text/css" rel="stylesheet" href="/css/demo.css" />
-    
-    <script type="text/javascript" src="/dist/js/jquery.mmenu.min.all.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+      <link rel="stylesheet" type="text/css" href="/css/new_inspection.css" media="screen">
+      <link rel="stylesheet" type="text/css" href="/css/w3.css" media="screen">
 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-    <script type="text/javascript">
-      $(function() {
-        $('nav#menu').mmenu();
-      });
-    </script>
-
-  </head>
-
-  <div id="page">
-    <div class="header">
-      <a href="#menu"></a>
-        Health Inspector
-    </div>
+    </head>
 
     <body>
-      <div class="content"></div>
-        <div id="cont">
-          <div id="tp">
-            <form class="w3-container" method="post" action="/inspection/create">
-              <center><h2>Inspection Form</h2></center>
-              <p>Resturaunt ID: <br> <input type="text" name="establishment_id" value=""></p>
-              <p>User ID: <br> <input type="text" name="user_id" value=""></p>
-              <p>Inspection Date:<br> <input type="date" name="date_of_inspection" value=""></p>
-              <p>Time in:<br> <input type="text" name="time_in" value=""></p>
-              <p>Time out:<br> <input type="text" name="time_out" value=""></p>
-              <p>Permit Number:<br> <input type="text" name="permit_number" value=""></p>
-              <p>Type:<br> <input type="text" name="type" value=""></p>
-              <p><input class="w3-check" type="checkbox" name="type" value="actionRequired"><label class="w3-validate">Action Required</label></p>
+            <form class="personalContainer" method="post" action="/inspection/create">
+              <center><p>Inspection Form</p></center>
+              <p><input class="w3-input w3-border w3-hover-blue" type="text" name="establishment_id" value="" placeholder="Restuarant ID"></p>
+              <p><input class="w3-input w3-border w3-hover-blue" type="text" name="user_id" value="" placeholder="User ID"></p>
+              <p>Inspection Date: <input type="date" name="date_of_inspection" value=""></p>
+              <p>Time in: <input type="time" name="time_in" value=""></p>
+              <p>Time out: <input type="time" name="time_out" value=""></p>
+              <p><input class="w3-input w3-border w3-hover-blue" type="text" name="permit_number" value="" placeholder="Signature"></p>
+               <p><input class="w3-check" type="checkbox" name="type" value="reinspection"><label class="w3-validate">Re-Inspection</label></p>
+              <p><input class="w3-check" type="checkbox" name="actionRequired" value="actionRequired"><label class="w3-validate">Action Required</label></p>
               <p><label> Risk Level: </label>
-                <input type="radio" name="risk_level" value="1"> 1
-              	<input type="radio" name="risk_level" value="2"> 2
-              	<input type="radio" name="risk_level" value="3"> 3
-              	<input type="radio" name="risk_level" value="4"> 4
-              	<input type="radio" name="risk_level" value="5"> 5
+                <input class="w3-radio" type="radio" name="risk_level" value="1"> <label class="w3-validate">1</label>
+              	<input class="w3-radio" type="radio" name="risk_level" value="2"> <label class="w3-validate">2</label>
+              	<input class="w3-radio" type="radio" name="risk_level" value="3"> <label class="w3-validate">3</label>
+              	<input class="w3-radio" type="radio" name="risk_level" value="4"> <label class="w3-validate">4</label>
+              	<input class="w3-radio" type="radio" name="risk_level" value="5"> <label class="w3-validate">5</label>
               </p>
 
               <p><input class="w3-check" type="checkbox" name="embargo" value="embargo"><label class="w3-validate">Embargo</label></p>
               <p>Re-Inspection Date:<br> <input type="date" name="date_of_reinspection" value="" ></p>
-              <p>Signature:<br> <input type="text" name="signature" value=""></p>
-
-              <button> Submit </button>
+              <p><input class="w3-input w3-border w3-hover-blue" type="text" name="signature" value="" placeholder="Signature"></p>
+              <input type="submit" value="Submit">
             </form>
           </div>
         </div>   
       </div> 
     </body>
-
-    <nav id="menu">
-        <ul>
-          <li><a href="http://localhost:3000">Home</a></li>
-          <li><a href="about">About</a></li>
-          <li><a href="team">Team</a></li>
-          <li><a href="mockups">Layout</a></li>
-        </ul>
-    </nav>
-    
-  </div>
-
-
 </html>
 
