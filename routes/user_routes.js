@@ -19,6 +19,49 @@ router.get('/new', (req,res) => {
 	res.render('new_user', { message: message });
 });
 
+router.get('/login', (req,res) => {
+	var user = req.session.user;
+
+	if(user){
+		req.flash('home', 'Already logged in as ' + user.username);
+		res.redirect('/');
+	} else {
+		var message = req.flash('login');
+		res.render('login', {
+			message: message
+		});
+	}
+});
+
+router.post('/auth', (req, res) => {
+	var user = req.session.user;
+
+	if(user){
+		res.redirect('/');
+	} else {
+		var username = req.body.username;
+		var password = req.body.password;
+
+		if(!(username && password)){
+			req.flash('login', 'One or more fields empty');
+			res.redirect('/users/login');
+		} else {
+			model.login(username, password, function(error, user){
+				if(error){
+					req.flash('login', error);
+					res.redirect('/users/login');
+				} else {
+					//Set the session user
+					req.session.user = user;
+
+					req.flash('home', 'Logged in successfully as '+ user.username);
+					res.redirect('/');
+				}
+			});
+		}
+	}
+});
+
 
 router.post('/create', (req,res) => {
     var data = req.body;
