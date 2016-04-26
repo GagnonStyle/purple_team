@@ -11,23 +11,29 @@
 
     <body>
             <form class="personalContainer" method="post" action="/inspections/create">
-              <center><p>Inspection Form</p></center>
-              <p><input class="w3-input w3-border w3-hover-blue" type="text" name="establishment_id" value="" placeholder="Restuarant ID"></p>
+              <center><h2>Inspection Form</h2></center><br>
               <p><input class="w3-input w3-border w3-hover-blue" type="text" name="user_id" value="" placeholder="User ID"></p>
-              <p>Inspection Date: <input type="date" name="date_of_inspection" value=""></p>
-              <p>Time in: <input type="time" name="time_in" value=""></p>
-              <p>Time out: <input type="time" name="time_out" value=""></p>
-              <p><input class="w3-input w3-border w3-hover-blue" type="text" name="permit_number" value="" placeholder="Signature"></p>
-               <p><input class="w3-check" type="checkbox" name="type" value="reinspection"><label class="w3-validate">Re-Inspection</label></p>
-              <p><input class="w3-check" type="checkbox" name="action_required" value="1"><label class="w3-validate">Action Required</label></p>
-                <label>Food Establishment Name </label><select name="establishment_id">
-                    {{#each food_establishments}}
-                        <option value="{{this.id}}">{{this.name}}</option>
-                    {{/each}}
+
+              <p>Inspection Date:<br> <input type="date" name="date_of_inspection" value=""></p>
+
+              <p>Time in: <br> <input type="time" name="time_in" value=""></p>
+              <p>Time out: <br> <input type="time" name="time_out" value=""></p>
+
+              <p><input class="w3-check" type="checkbox" id="type" name="type" value="reinspection">
+              <label for="type" class="w3-validate">Re-Inspection</label></p>
+
+              <p><input class="w3-check" type="checkbox" id="action_required" name="action_required" value="1">
+              <label for="action_required" class="w3-validate">Action Required</label></p>
+              <p>
+                <label>Food Establishment Name: </label><br>
+                <select name="establishment_id">
+                  <option value="" disabled selected>Select a Food Establishment</option>
+                  {{#each food_establishments}}
+                      <option value="{{this.id}}">{{this.name}}</option>
+                  {{/each}}
                 </select>
-              </p>
-              
-              <p><label> Risk Level: </label>
+              <p>
+              <p><label> Risk Level: </label><br>
                 <input class="w3-radio" type="radio" name="risk_level" value="1"> <label class="w3-validate">1</label>
               	<input class="w3-radio" type="radio" name="risk_level" value="2"> <label class="w3-validate">2</label>
               	<input class="w3-radio" type="radio" name="risk_level" value="3"> <label class="w3-validate">3</label>
@@ -35,8 +41,10 @@
               	<input class="w3-radio" type="radio" name="risk_level" value="5"> <label class="w3-validate">5</label>
               </p>
 
-              <p><input class="w3-check" type="checkbox" name="embargo" value="1"><label class="w3-validate">Embargo</label></p>
+              <p><input class="w3-check" type="checkbox" id="embargo" name="embargo" value="1">
+              <label for="embargo" class="w3-validate">Embargo</label></p>
               <p>Re-Inspection Date:<br> <input type="date" name="date_of_reinspection" value="" ></p>
+              <br>
               <p><input class="w3-input w3-border w3-hover-blue" type="text" name="signed" value="" placeholder="Signature"></p>
               <input type="submit" value="Submit">
             </form>
