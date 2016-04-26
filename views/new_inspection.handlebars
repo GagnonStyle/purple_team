@@ -1,57 +1,48 @@
-<head>
-  <title>New Inspection</title>
 
-  <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
-  <link rel="stylesheet" type="text/css" href="/css/new_inspection.css" media="screen">
-  <link rel="stylesheet" type="text/css" href="/css/w3.css" media="screen">
+<title>New Inspection</title>
+<form class="personalContainer" method="post" action="/inspections/create">
+  <center><h2>Inspection Form</h2></center><br>
+  <p><input class="w3-input w3-border w3-hover-blue" type="text" name="user_id" value="" placeholder="User ID"></p>
 
-</head>
+  <p>
+    <label>Food Establishment Name: </label><br>
+    <select name="establishment_id">
+      <option value="" disabled selected>Select a Food Establishment</option>
+      {{#each food_establishments}}
+          <option value="{{this.id}}">{{this.name}}</option>
+      {{/each}}
+    </select>
+  </p>
+  <p>
+  Inspection Date:<br> 
+  <input type="date" id="date_of_inspection" name="date_of_inspection" value="">
+  </p>
 
-<body>
-  <form class="personalContainer" method="post" action="/inspections/create">
-    <center><h2>Inspection Form</h2></center><br>
-    <p><input class="w3-input w3-border w3-hover-blue" type="text" name="user_id" value="" placeholder="User ID"></p>
+  <p>Time in: <br> <input type="time" name="time_in" value=""></p>
+  <p>Time out: <br> <input type="time" name="time_out" value=""></p>
 
-    <p>
-      <label>Food Establishment Name: </label><br>
-      <select name="establishment_id">
-        <option value="" disabled selected>Select a Food Establishment</option>
-        {{#each food_establishments}}
-            <option value="{{this.id}}">{{this.name}}</option>
-        {{/each}}
-      </select>
-    </p>
-    <p>
-    Inspection Date:<br> 
-    <input type="date" id="date_of_inspection" name="date_of_inspection" value="">
-    </p>
+  <p><input class="w3-check" type="checkbox" id="action_required" name="action_required" value="1">
+  <label for="action_required" class="w3-validate">Action Required</label></p>
 
-    <p>Time in: <br> <input type="time" name="time_in" value=""></p>
-    <p>Time out: <br> <input type="time" name="time_out" value=""></p>
+  <p><label> Risk Level: </label><br>
+    <input class="w3-radio" type="radio" name="risk_level" value="1"> <label class="w3-validate">1</label>
+  	<input class="w3-radio" type="radio" name="risk_level" value="2"> <label class="w3-validate">2</label>
+  	<input class="w3-radio" type="radio" name="risk_level" value="3"> <label class="w3-validate">3</label>
+  	<input class="w3-radio" type="radio" name="risk_level" value="4"> <label class="w3-validate">4</label>
+  	<input class="w3-radio" type="radio" name="risk_level" value="5"> <label class="w3-validate">5</label>
+  </p>
 
-    <p><input class="w3-check" type="checkbox" id="action_required" name="action_required" value="1">
-    <label for="action_required" class="w3-validate">Action Required</label></p>
+  <p><input class="w3-check" type="checkbox" id="embargo" name="embargo" value="1">
+  <label for="embargo" class="w3-validate">Embargo</label></p>
 
-    <p><label> Risk Level: </label><br>
-      <input class="w3-radio" type="radio" name="risk_level" value="1"> <label class="w3-validate">1</label>
-    	<input class="w3-radio" type="radio" name="risk_level" value="2"> <label class="w3-validate">2</label>
-    	<input class="w3-radio" type="radio" name="risk_level" value="3"> <label class="w3-validate">3</label>
-    	<input class="w3-radio" type="radio" name="risk_level" value="4"> <label class="w3-validate">4</label>
-    	<input class="w3-radio" type="radio" name="risk_level" value="5"> <label class="w3-validate">5</label>
-    </p>
+  <p><input class="w3-check" type="checkbox" id="type" name="type" value="reinspection">
+  <label for="type" class="w3-validate">Re-Inspection</label></p>
 
-    <p><input class="w3-check" type="checkbox" id="embargo" name="embargo" value="1">
-    <label for="embargo" class="w3-validate">Embargo</label></p>
-
-    <p><input class="w3-check" type="checkbox" id="type" name="type" value="reinspection">
-    <label for="type" class="w3-validate">Re-Inspection</label></p>
-    
-    <p>Re-Inspection Date:<br> <input type="date" name="date_of_reinspection" value="" ></p>
-    <br>
-    <p><input class="w3-input w3-border w3-hover-blue" type="text" name="signed" value="" placeholder="Signature"></p>
-    <input type="submit" value="Submit">
-  </form>
-</body>
+  <p>Re-Inspection Date:<br> <input type="date" name="date_of_reinspection" value="" ></p>
+  <br>
+  <p><input class="w3-input w3-border w3-hover-blue" type="text" name="signed" value="" placeholder="Signature"></p>
+  <input type="submit" value="Submit">
+</form>
 
 <script>
   $("#date_of_inspection").val(new Date().toJSON().substring(0,10));
