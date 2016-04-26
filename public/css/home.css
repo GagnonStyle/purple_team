@@ -1,5 +1,5 @@
 body {
-  background-color: #929292;
+  background-color: white;
 }
 
 
@@ -30,5 +30,38 @@ body {
 
 .homebuttonstyle:hover {
     background-color: #2196F3; /* Green */
+    color: white;
+}
+
+#homeContent{
+  width: 100%;
+  height: auto;
+}
+
+#home {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+#homeli a {
+    display: block;
+    color: #000;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-right:20px; 
+    padding-left:20px;
+    text-decoration: none;
+}
+
+#homeli a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#homeli a:hover:not(.active) {
+    background-color: #555;
     color: white;
 }

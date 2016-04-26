@@ -4,36 +4,22 @@
 	<title> Home Page </title>
 	<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
 	<link rel="stylesheet" type="text/css" href="/css/home.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="/css/w3.css" media="screen">
-	<link type="text/css" rel="stylesheet" href="/dist/css/jquery.mmenu.all.css" />
-	<link type="text/css" rel="stylesheet" href="/css/demo.css" />
-
-	<script type="text/javascript" src="/dist/js/jquery.mmenu.min.all.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-	<script type="text/javascript">
-		$(function() {
-			$('nav#menu').mmenu();
-		});
-	</script>
-</head>
-
-<div id="page">
-	<div class="header">
-		<a href="#menu"></a>
-			Health Inspector
-	</div>
-
 
 <body>
-<img class= "logo" src="HealthCheckLogo.jpg" alt="Logo" height="70" width="150">
-<div class= "logBox">
-<section class= "HomeMenu" id="login">
+<!--<img class= "logo" src="HealthCheckLogo.jpg" alt="Logo" height="70" width="150">-->
+	<div class= "homeContent">
+		<center><ul id="home">
+		  <li id="homeli"><center><a href="/inspections/new">New Inspection</a></center></li>
+		  <li id="homeli"><center><a href="/inspections">View Old Inspections</a></center></li>
+		  <li id="homeli"><center><a href="#sync">Sync To Database</a></center></li>
+		  <li id="homeli"><center><a href="/foodcode">Food Code</a></center></li>
+		</ul></center>
 
-  <div class= "homebutton" align="center">
+
+  <!--<div class= "homebutton" align="center">
     <button class= "homebuttonstyle" onclick="window.location.href='/inspections/new'" >New Inspection</button>
   </div>
 
@@ -51,19 +37,10 @@
 
   <div class= "homebutton" align="center">
     <button class= "homebuttonstyle" onclick="window.location.href='/logout'">Log Out</button>
-  </div>
-</section>
-</div>
+  </div>-->
+		
+	</div>
 </body>
-
-<nav id="menu">
-		<ul>
-			<li><a href="http://localhost:3000">Home</a></li>
-			<li><a href="about">About</a></li>
-			<li><a href="team">Team</a></li>
-			<li><a href="mockups">Layout</a></li>
-		</ul>
-</nav>
 
 </div>
 </html>

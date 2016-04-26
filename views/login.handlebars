@@ -5,51 +5,23 @@
 	<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
 	<link rel="stylesheet" type="text/css" href="/css/login.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="/css/w3.css" media="screen">
-	<link type="text/css" rel="stylesheet" href="/dist/css/jquery.mmenu.all.css" />
-	<link type="text/css" rel="stylesheet" href="/css/demo.css" />
 
-	<script type="text/javascript" src="/dist/js/jquery.mmenu.min.all.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-	<script type="text/javascript">
-		$(function() {
-			$('nav#menu').mmenu();
-		});
-	</script>
-</head>
-
-<div id="page">
-	<div class="header">
-		<a href="#menu"></a>
-			Health Inspector
-	</div>
-
 
 <body>
-<img class= "logo" src="HealthCheckLogo.jpg" align="center" alt="Logo" height="140" width="370">
+<img class= "logo" src="/../HealthCheckLogo.jpg" align="center" alt="Logo" height="140" width="370">
 <div class= "logBox">
-<h2> Welcome Health Inspector! </h2>
+<h2> Login </h2>
 <section class= "loginSection" id="login">
-  <form method="post" action="/api/user">
+  <form method="post" action="/users/auth">
     User Name: <input type="text" name="username"> <br>
-    Password:   <input type="text" name="password"> <br>
+    Password:   <input type="password" name="password"> <br>
     <input class= "signin" type="submit" value="Sign In">
   </form>
 </section>
 </div>
 </body>
 
-<nav id="menu">
-		<ul>
-			<li><a href="http://localhost:3000">Home</a></li>
-			<li><a href="about">About</a></li>
-			<li><a href="team">Team</a></li>
-			<li><a href="mockups">Layout</a></li>
-		</ul>
-</nav>
-
-</div>
 </html>

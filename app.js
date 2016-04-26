@@ -38,10 +38,6 @@ app.get('/', function (req, res) {
   res.render('home', {message: message});
 });
 
-app.get('/login', function (req, res) {
-  res.render('login');
-});
-
 app.get('/health_code', function (req, res) {
   res.render('health_code');
 });

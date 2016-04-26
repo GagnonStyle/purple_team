@@ -21,9 +21,9 @@ router.get('/new', (req,res) => {
 
 router.post('/create', (req,res) => {
     var data = req.body;
-    console.log(data);
     // if any empty inputs, redirect back to signup with message
 
+    //XXX: Let user input date
     data.time_in = new Date();
     data.time_out = new Date();
 
