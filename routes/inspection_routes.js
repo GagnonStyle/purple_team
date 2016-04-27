@@ -6,8 +6,16 @@ var router = express.Router();
 router.get('/', (req,res) => {
 	var user = req.session.user;
 	if(user){
-		res.render('all_inspections', { 
-			current_user: user 
+		model.all(function(err, inspections){
+			if(err){
+				req.flash('home', 'Error: ' + err);
+				res.redirect('/');
+			} else {
+				res.render('all_inspections', { 
+					current_user: user,
+					inspections: inspections 
+				});
+			}
 		});
 	} else {
 		req.flash('login', 'You must be logged in to do this');
@@ -22,7 +30,7 @@ router.get('/new', (req,res) => {
 	    establishments.all(function(err, establishments){
 			if(err){
 				req.flash('home', 'Error: ' + err);
-				res.redirect('/')
+				res.redirect('/');
 			} else {
 				res.render('new_inspection', {
 					current_user: user, 
@@ -43,14 +51,14 @@ router.post('/create', (req,res) => {
     if(user){
 	    var data = req.body;
 	    // if any empty inputs, redirect back to signup with message
-
+	    data.user_id = user.id;
 	    //XXX: Let user input date
 	    data.time_in = new Date();
 	    data.time_out = new Date();
 
 	    (!data.action_required) && (data.action_required = false);
 	    (!data.embargo) && (data.embargo = false);
-	    
+
 	    if(!(data.establishment_id && data.user_id && data.date_of_inspection && data.time_in && data.time_out && data.permit_number && data.type &&  data.risk_level &&  data.date_of_reinspection && data.signed)){
 			req.flash('inspections', 'One or more required fields omitted');
 			res.redirect('/inspections/new'); 

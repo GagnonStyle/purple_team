@@ -28,8 +28,6 @@
             <div id="home" class="tab-pane fade in active">
                           <form class="personalContainer" method="post" action="/inspections/create">
                 <center><h2>Inspection Form</h2></center>
-                <p><input class="w3-input w3-border w3-hover-blue" type="text" name="user_id" value="" placeholder="User ID"></p>
-
                 <p>
                   <label>Food Establishment Name: </label>
                   <select name="establishment_id">
@@ -66,6 +64,7 @@
                 
                 <p>Re-Inspection Date: <input type="date" name="date_of_reinspection" value="" ></p>
           
+                <p><input class="w3-input w3-border w3-hover-blue" type="text" name="permit_number" value="" placeholder="Permit Number"></p>
                 <p><input class="w3-input w3-border w3-hover-blue" type="text" name="signed" value="" placeholder="Signature"></p>
                 <input type="submit" value="Submit">
               </form>
