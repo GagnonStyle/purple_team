@@ -20,6 +20,7 @@ router.get('/', (req,res) => {
 });
 
 router.get('/new', (req,res) => {
+    	var user = req.session.user;
 	var message = req.flash('users');
 	res.render('new_user', { 
 		current_user: user,
