@@ -27,4 +27,24 @@
 .navbarli a:hover:not(.active) {
     background-color: #111;
 }
+.navbarli {
+    float: left;
+    color: white;
+}
+.right {
+    float: right;
+}
+
+.navbarli a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbarli a:hover:not(.active) {
+    background-color: #111;
+}
+
 

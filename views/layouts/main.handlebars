@@ -6,17 +6,17 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
   
 
 
     <ul id="navbarul">
       <li class="navbarli"><a href="/">Home</a></li>
-      <li class="navbarli"><a href="/inspections/new">New Inspection</a></li>
       <li class="navbarli"> <a href="/foodcode">Food Code</a></li>
+      <li class="navbarli"> <a href="/create">+Create</a></li>
       <li class="navbarli right">
         {{#if current_user}}
-            <a>Logged in as {{current_user.username}}</a>
+            <a>{{current_user.username}}</a>
             <a method="post" href="/users/logout">Log Out</a>
         {{else}}
             <a href="/users/login">Login or Sign Up</a>
