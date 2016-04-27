@@ -7,17 +7,9 @@
 </head>
 <body>
 <h2 align="center"> Past Inspections </h2>
-<header></header>
-<div class="dropdown">
-  <button class="dropbtn">Order by:</button>
-  <div class="dropdown-content">
-    <a href="#">name</a>
-    <a href="#">date</a>
-    <a href="#">risk</a>
-  </div>
-</div>
+<header></header> 
 {{#each inspections}}
-  <div class="inspection">
+  <div class="inspections">
 		<div class="inspection_id">ID: <strong>{{this.id}}</strong></div>
     <div class="inspection_restaurant">Restaurant ID: <strong>{{this.establishment_id}}</strong></div>
     <div class="inspection_user">User: <strong>{{this.user_id}}</strong></div>
@@ -30,6 +22,7 @@
 		<div class="inspection_embargo">Embargo: <strong>{{this.embargo}}</strong></div>
 		<div class="inspection_reinspect">Date of Reinspection: <strong>{{this.date_of_resinspection}}</strong></div>
 		<div class="inspection_signed">Signed: <strong>{{this.signed}}</strong></div>
+		<button> View Details </button>
   </div>
   <hr>
 {{/each}}
