@@ -3,20 +3,28 @@ var model = require('../lib/users');
 var router = express.Router();
 
 router.get('/', (req,res) => {
+	var user = req.session.user;
 	var message = req.flash('users');
 	model.all(function(err, users){
 	      if(err){
 	        	req.flash('home', 'Error:' + err);
 	        	res.redirect('/');
 	      } else {
-		        res.render('all_users', { users: users, message: message });
+		        res.render('all_users', { 
+		        	current_user: user,
+		        	users: users, 
+		        	message: message 
+		        });
 	      }
     });
 });
 
 router.get('/new', (req,res) => {
 	var message = req.flash('users');
-	res.render('new_user', { message: message });
+	res.render('new_user', { 
+		current_user: user,
+		message: message 
+	});
 });
 
 router.get('/login', (req,res) => {
@@ -28,8 +36,22 @@ router.get('/login', (req,res) => {
 	} else {
 		var message = req.flash('login');
 		res.render('login', {
+			current_user: user,
 			message: message
 		});
+	}
+});
+
+router.get('/logout', (req,res) => {
+	var user = req.session.user;
+	if(user){
+		delete req.session.user;
+
+		req.flash('home', 'Successfully logged out');
+		res.redirect('/');
+	} else {
+		req.flash('home', 'You\'re already logged out!');
+		res.redirect('/');
 	}
 });
 
@@ -37,6 +59,7 @@ router.post('/auth', (req, res) => {
 	var user = req.session.user;
 
 	if(user){
+		req.flash('home', 'Already logged in as ' + user.username);
 		res.redirect('/');
 	} else {
 		var username = req.body.username;

@@ -34,16 +34,19 @@ app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
+  var user = req.session.user;	
   var message = req.flash('home');
-  res.render('home', {message: message});
-});
-
-app.get('/health_code', function (req, res) {
-  res.render('health_code');
+  res.render('home', {
+  	current_user: user,
+  	message: message
+  });
 });
 
 app.get('/foodcode', function (req, res) {
-  res.render('foodcode');
+  	var user = req.session.user;	
+  	res.render('foodcode', {
+  		current_user: user
+  	});
 });
 
 app.use('/inspections', require('./routes/inspection_routes'));
