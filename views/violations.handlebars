@@ -20,54 +20,41 @@
       <div class="container">
         <h2>New Inspection</h2>
         <ul class="nav nav-tabs">
-          <li class="active"><a href="#home">New Inspection</a></li>
+          <li class="active"><a href="#home">New Violation</a></li>
           <li><a href="#menu1">View Foodcode</a></li>
         </ul>
 
         <div class="tab-content">
             <div id="home" class="tab-pane fade in active">
                           <form class="personalContainer" method="post" action="/inspections/create">
-                <center><h2>Inspection Form</h2></center>
+                <center><h2>Violation Form</h2></center>
                 <p>
-                  <label>Food Establishment Name: </label>
+                  <label>Inspection Form ID </label>
                   <select name="establishment_id">
-                    <option value="" disabled selected>Select a Food Establishment</option>
-                    {{#each food_establishments}}
-                        <option value="{{this.id}}">{{this.name}}</option>
-                    {{/each}}
+                    <option value="" disabled selected>Select an inspection form</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
                   </select>
                 </p>
-                <p>
-                Inspection Date:
-                <input type="date" id="date_of_inspection" name="date_of_inspection" value="">
-                </p>
 
-                <p>Time in: <input type="time" name="time_in" value=""></p>
-                <p>Time out: <input type="time" name="time_out" value=""></p>
+                 <p><input class="w3-input w3-border w3-hover-blue" type="text" name="username" placeholder="Violation Name"></p>
 
-                <p><input class="w3-check" type="checkbox" id="action_required" name="action_required" value="1">
-                <label for="action_required" class="w3-validate">Action Required</label></p>
-
-                <p><label> Risk Level: </label>
+                <p><label> Violation Risk Level: </label>
                   <input class="w3-radio" type="radio" name="risk_level" value="1"> <label class="w3-validate">1</label>
                   <input class="w3-radio" type="radio" name="risk_level" value="2"> <label class="w3-validate">2</label>
                   <input class="w3-radio" type="radio" name="risk_level" value="3"> <label class="w3-validate">3</label>
                   <input class="w3-radio" type="radio" name="risk_level" value="4"> <label class="w3-validate">4</label>
                   <input class="w3-radio" type="radio" name="risk_level" value="5"> <label class="w3-validate">5</label>
                 </p>
-
-                <p><input class="w3-check" type="checkbox" id="embargo" name="embargo" value="1">
-                <label for="embargo" class="w3-validate">Embargo</label></p>
-
-                <p><input class="w3-check" type="checkbox" id="type" name="type" value="true">
-                <label for="type" class="w3-validate">Re-Inspection</label></p>
-                
-                <p>Re-Inspection Date: <input type="date" name="date_of_reinspection" value="" ></p>
-          
-                <p><input class="w3-input w3-border w3-hover-blue" type="text" name="permit_number" value="" placeholder="Permit Number"></p>
-                <p><input class="w3-input w3-border w3-hover-blue" type="text" name="signed" value="" placeholder="Signature"></p>
+          		
+			    <p><input type="file" name="fileToUpload" id="fileToUpload"></p>
                 <input type="submit" value="Submit">
               </form>
+
+
             </div>
 
             <div id="menu1" class="tab-pane fade">

@@ -1,14 +1,13 @@
 <title>New User</title>
-<h2>New User</h2>
-<form method="post" action="/users/create">
-    Enter a username:<br>
-    <input type="text" name="username" placeholder="Username"><br><br>
-    Enter a password:<br>
-    <input type="password" name="password" placeholder="Password"><br>
-    <input type="password" name="confirm_password" placeholder="Re-enter password"><br><br>
-    Enter your town:<br>
-    <input type="text" name="town" placeholder="Town"><br><br>
-    Is Admin:
-    <input type="checkbox" name="is_admin"></input><br><br>
-    <button>Create Account</button>
-</form>
+<center><h2>CREATE A NEW USER</h2></center>
+    <link rel="stylesheet" type="text/css" href="/css/w3.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/css/new_inspection.css" media="screen">
+
+    <form method="post" action="/users/create">
+        <p><input class="w3-input w3-border w3-hover-blue" type="text" name="username" placeholder="Username"></p>
+        <p><input class="w3-input w3-border w3-hover-blue" type="password" name="password" placeholder="Password"></p>
+        <p><input class="w3-input w3-border w3-hover-blue" type="password" name="confirm_password" placeholder="Re-enter password"></p>
+        <p><input class="w3-input w3-border w3-hover-blue" type="text" name="town" placeholder="Town"></p>
+        <p><input class="w3-check"  type="checkbox" name="is_admin"></input><label for="type" class="w3-validate">Is Admin</label></p></p>
+        <input type="submit" value="Submit"/>
+    </form>
