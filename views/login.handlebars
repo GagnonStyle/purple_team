@@ -3,25 +3,25 @@
 <head>
 	<title> Login Page </title>
 	<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
-	<link rel="stylesheet" type="text/css" href="/css/login.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="/css/w3.css" media="screen">
-
+	<link rel="stylesheet" type="text/css" href="/css/new_inspection.css" media="screen">
 
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 
-<body>
-<img class= "logo" src="/../HealthCheckLogo.jpg" align="center" alt="Logo" height="140" width="370">
-<div class= "logBox">
-<h2> Login </h2>
-<section class= "loginSection" id="login">
-  <form method="post" action="/users/auth">
-    User Name: <input type="text" name="username"> <br>
-    Password:   <input type="password" name="password"> <br>
-    <input class= "signin" type="submit" value="Sign In">
-  </form>
-</section>
-</div>
-</body>
+	<body>
+	<div class= "logBox">
+	<h2></h2>
+	<section class= "loginSection" id="login">
+	  <center>
+		  <form method="post" action="/users/auth">
+		    <p><input class="w3-input w3-border w3-hover-blue" type="text" name="username" placeholder="Username"></p>
+		    <p><input class="w3-input w3-border w3-hover-blue" type="password" name="password" placeholder="Password"></p>
+		    <input type="submit" value="Submit">
+		  </form>
+	  </center>
+	</section>
+	</div>
+	</body>
 
 </html>
