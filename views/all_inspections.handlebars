@@ -6,10 +6,10 @@
   <link rel="stylesheet" type="text/css" href="all_inspections.css" media="screen">
 </head>
 <body>
-<h2 align="center"> Past Inspections </h2>
-<header></header> 
+<h2 align="center"> Past Inspections </h2><hr>
+<header></header><br>
 {{#each inspections}}
-  <div class="inspections">
+  <div class="inspections" align="center">
 		<div class="inspection_id">ID: <strong>{{this.id}}</strong></div>
     <div class="inspection_restaurant">Restaurant ID: <strong>{{this.establishment_id}}</strong></div>
     <div class="inspection_user">User: <strong>{{this.user_id}}</strong></div>
@@ -22,9 +22,12 @@
 		<div class="inspection_embargo">Embargo: <strong>{{this.embargo}}</strong></div>
 		<div class="inspection_reinspect">Date of Reinspection: <strong>{{this.date_of_resinspection}}</strong></div>
 		<div class="inspection_signed">Signed: <strong>{{this.signed}}</strong></div>
-		<button> View Details </button>
+		<button> View Details </button><br><br>
   </div>
   <hr>
-{{/each}}
+{{/each}}<br>
+<div class="end" align="center">
+	No more inspections.
+</div>
 </body>
 </html>

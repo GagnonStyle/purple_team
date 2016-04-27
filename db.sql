@@ -30,6 +30,7 @@ create table inspections (
 	signed varchar(255),
 	primary key (id)
 );
+insert into food_establishments values (default, 1, 1, '2015-12-12', '4321432', '4321433', 1, 'no clue', FALSE, 3, FALSE, '2016-11-11', 1);
 
 create table violations (
 	id serial,
@@ -51,6 +52,7 @@ create table food_establishments (
 	description text,
 	primary key (id)
 );
+insert into food_establishments values (default, 'Butt Palace', 'Buttsville', '383 Butt Road', 'Carl', 'A place that literally only serves butts.');
 
 
 -- create table foodcodeclause (
