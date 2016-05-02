@@ -56,13 +56,7 @@ app.get('/create', function (req, res) {
     });
 });
 
-app.get('/violations/new', function (req, res) {
-    var user = req.session.user;  
-    res.render('violations', {
-      current_user: user
-    });
-});
-
+app.use('/violations', require('./routes/violation_routes'));
 app.use('/inspections', require('./routes/inspection_routes'));
 app.use('/users', require('./routes/user_routes'));
 app.use('/establishments', require('./routes/food_establishment_routes'));
