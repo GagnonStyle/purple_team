@@ -23,21 +23,21 @@ router.post('/create', function (req, res) {
 	
 	if(user) {
 		var data = req.body;
+		
 		if(!(data.inspection_id && data.name && data.color && data.description && data.food_code_clause_number)) {
-		   req.flash('violations', 'One or more required fields omitted');
+		    req.flash('violations', 'One or more required fields omitted');
 			res.redirect('/inspections'); 
 		} else {
-		console.log(data);
-		model.create(data, function(err, user) {			
-				if(err) {
-				  req.flash('violations', 'Error: ' + err);
-				  res.redirect('/violations/new');
-				} else {
-				  req.flash('violations', 'Violation created successfully!');
-				  res.redirect('/inspections');
-				}
-				
-		});
+			model.create(data, function(err, user) {			
+					if(err) {
+					  req.flash('violations', 'Error: ' + err);
+					  res.redirect('/violations/new');
+					} else {
+					  req.flash('violations', 'Violation created successfully!');
+					  res.redirect('/inspections');
+					}
+					
+			});
 		}
 	}
 	else {
