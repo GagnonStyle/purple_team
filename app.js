@@ -56,7 +56,7 @@ app.get('/create', function (req, res) {
     });
 });
 
-app.get('/violations', function (req, res) {
+app.get('/violations/new', function (req, res) {
     var user = req.session.user;  
     res.render('violations', {
       current_user: user

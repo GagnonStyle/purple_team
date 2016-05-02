@@ -23,6 +23,7 @@
 			<div class="inspection_embargo">Embargo: <strong>{{this.embargo}}</strong></div>
 			<div class="inspection_reinspect">Date of Reinspection: <strong>{{this.date_of_resinspection}}</strong></div>
 			<div class="inspection_signed">Signed: <strong>{{this.signed}}</strong></div>
+			<a href="/violations/new?inspection_id={{this.id}}"> Create a new Violation for this Inspection </a><br><br>
 	    {{else}}
 	    	<a href="/inspections?id={{this.id}}"> View Details or Add Violations </a><br><br>
 	    {{/if}}
