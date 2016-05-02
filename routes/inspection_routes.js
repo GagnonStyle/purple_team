@@ -1,5 +1,6 @@
 var express = require('express');
 var model = require('../lib/inspections');
+var violations = require('../lib/violations');
 var establishments = require('../lib/food_establishments');
 var router = express.Router();
 
@@ -12,10 +13,18 @@ router.get('/', (req,res) => {
 					req.flash('home', 'Error: ' + err);
 					res.redirect('/');
 				} else {
-					res.render('all_inspections', { 
-						current_user: user,
-						inspections: inspection,
-						single_inspection: true 
+					violations.all_for_inspection(req.query.id, function(err, violations){
+						if(err){
+							req.flash('home', 'Error: ' + err);
+							res.redirect('/');
+						} else {
+							res.render('all_inspections', { 
+								current_user: user,
+								inspections: inspection,
+								single_inspection: true,
+								violations: violations 
+							});	
+						}
 					});
 				}
 		    });
