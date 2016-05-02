@@ -6,17 +6,33 @@ var router = express.Router();
 router.get('/', (req,res) => {
 	var user = req.session.user;
 	if(user){
-		model.all(function(err, inspections){
-			if(err){
-				req.flash('home', 'Error: ' + err);
-				res.redirect('/');
-			} else {
-				res.render('all_inspections', { 
-					current_user: user,
-					inspections: inspections 
-				});
-			}
-		});
+		if (req.query.id){
+		    model.one(req.query.id, function(err, inspection){
+		     	if(err){
+					req.flash('home', 'Error: ' + err);
+					res.redirect('/');
+				} else {
+					res.render('all_inspections', { 
+						current_user: user,
+						inspections: inspection,
+						single_inspection: true 
+					});
+				}
+		    });
+		} else {
+			model.all(function(err, inspections){
+				if(err){
+					req.flash('home', 'Error: ' + err);
+					res.redirect('/');
+				} else {
+					res.render('all_inspections', { 
+						current_user: user,
+						inspections: inspections,
+						single_inspection: false
+					});
+				}
+			});
+		}
 	} else {
 		req.flash('login', 'You must be logged in to do this');
 		res.redirect('/users/login');		

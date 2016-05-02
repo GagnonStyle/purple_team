@@ -11,23 +11,24 @@
 {{#each inspections}}
   <div class="inspections" align="center">
 		<div class="inspection_id">ID: <strong>{{this.id}}</strong></div>
-    <div class="inspection_restaurant">Restaurant ID: <strong>{{this.establishment_id}}</strong></div>
-    <div class="inspection_user">User: <strong>{{this.user_id}}</strong></div>
-    <div class="inspection_date">Date: <strong>{{this.date_of_inspection}}</strong></div>
-		<div class="inspection_time">Time In: <strong>{{this.time_in}}</strong> <br>Time Out: <strong>{{this.time_out}}</strong></div>
-		<div class="inspection_permit">Permit Number: <strong>{{this.permit_number}}</strong></div>
-		<div class="inspection_type">Re-inspection: <strong>{{this.type}}</strong></div>
-		<div class="inspection_action">Action Required: <strong>{{this.action_required}}</strong></div>
-		<div class="inspection_risk">Risk Level: <strong>{{this.risk_level}}</strong></div>
-		<div class="inspection_embargo">Embargo: <strong>{{this.embargo}}</strong></div>
-		<div class="inspection_reinspect">Date of Reinspection: <strong>{{this.date_of_resinspection}}</strong></div>
-		<div class="inspection_signed">Signed: <strong>{{this.signed}}</strong></div>
-		<button> View Details </button><br><br>
+	    <div class="inspection_restaurant">Restaurant ID: <strong>{{this.establishment_id}}</strong></div>
+	    <div class="inspection_user">User: <strong>{{this.user_id}}</strong></div>
+	    <div class="inspection_date">Date: <strong>{{this.date_of_inspection}}</strong></div>
+	    {{#if ../single_inspection}}
+	    	<div class="inspection_time">Time In: <strong>{{this.time_in}}</strong> <br>Time Out: <strong>{{this.time_out}}</strong></div>
+			<div class="inspection_permit">Permit Number: <strong>{{this.permit_number}}</strong></div>
+			<div class="inspection_type">Re-inspection: <strong>{{this.type}}</strong></div>
+			<div class="inspection_action">Action Required: <strong>{{this.action_required}}</strong></div>
+			<div class="inspection_risk">Risk Level: <strong>{{this.risk_level}}</strong></div>
+			<div class="inspection_embargo">Embargo: <strong>{{this.embargo}}</strong></div>
+			<div class="inspection_reinspect">Date of Reinspection: <strong>{{this.date_of_resinspection}}</strong></div>
+			<div class="inspection_signed">Signed: <strong>{{this.signed}}</strong></div>
+	    {{else}}
+	    	<a href="/inspections?id={{this.id}}"> View Details or Add Violations </a><br><br>
+	    {{/if}}
+		
   </div>
   <hr>
 {{/each}}<br>
-<div class="end" align="center">
-	No more inspections.
-</div>
 </body>
 </html>
