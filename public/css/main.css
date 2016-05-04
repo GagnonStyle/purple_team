@@ -16,7 +16,15 @@
     float: right;
 }
 
-.navbarli a {
+.navbarli a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbarli a:hover{
     display: inline-block;
     color: white;
     text-align: center;
@@ -33,14 +41,6 @@
 }
 .right {
     float: right;
-}
-
-.navbarli a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
 }
 
 .navbarli a:hover:not(.active) {
