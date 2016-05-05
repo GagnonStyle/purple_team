@@ -25,14 +25,16 @@
 			<div class="inspection_signed">Signed: <strong>{{this.signed}}</strong></div>
 			<a href="/violations/new?inspection_id={{this.id}}"> Create a new Violation for this Inspection </a><br><br>
 
-			<h3 align="center"> Violations for this Inspection</h3>
+			
 			{{#each ../violations}}
+				<h3 align="center"> Violations for this Inspection</h3>
 				<div class="violation_name">Name: <strong>{{this.name}}</strong></div>
 				<div class="violation_color">Color: <strong>{{this.color}}</strong></div>
 				<div class="violation_description">Description: <strong>{{this.description}}</strong></div>
 				<div class="violation_clause_no">Food Code Reference: <strong>{{this.food_code_clause_number}}</strong></div>
 				<br>
 			{{/each}}
+			<input type="button" value="Print this page" onClick="window.print()">
 	    {{else}}
 	    	<a href="/inspections?id={{this.id}}"> View Details or Add Violations </a><br><br>
 	    {{/if}}
